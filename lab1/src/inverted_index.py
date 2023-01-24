@@ -30,11 +30,11 @@ def search_inverted_index(index, keyword):
 
 if __name__ == "__main__":
     input_filenames = ['data_1.txt', 'data_2.txt', 'data_3.txt']
-    output_filename = 'output/inverted_index.json'
+    output_filename = '../inverted_index.json'
 
     inverted_index_results = {}
     for filename in input_filenames:
-        f = open('input/' + filename, 'r')
+        f = open('../seeds/' + filename, 'r')
         inverted_index_results = create_inverted_index(
             f.read(), inverted_index_results, filename)
         f.close()

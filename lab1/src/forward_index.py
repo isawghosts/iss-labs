@@ -29,12 +29,12 @@ def search_forward_index(index, keyword):
 
 if __name__ == "__main__":
     input_filenames = ['data_1.txt', 'data_2.txt', 'data_3.txt']
-    output_filename = 'output/forward_index.json'
+    output_filename = '../forward_index.json'
     
     forward_index_results = {}
 
     for filename in input_filenames:
-        f = open('input/' + filename, 'r')
+        f = open('../seeds/' + filename, 'r')
         forward_index_results[filename] = create_forward_index(f.read())
         f.close()
 
